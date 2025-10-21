@@ -1,0 +1,25 @@
+defaults:
+  src_display_nm: "{lookup_src_display(src_nm)}"
+  prcs_nm: "{process}"
+  env_nm: "{environment}"
+  file_cnt: 0
+  retry_cnt: 0
+  byte_cnt:  0
+  first_event_ts: null
+  last_event_ts: null
+  avg_latency_sec: null
+  p95_latency_sec: null
+  edl_run_id: null
+  batch_id: null
+  load_type: "INCR"
+  lob_cd: null
+  created_ts: "{now()}"
+rename_map:
+  msg_type_cd: doc_subtype_cd
+key_fields:
+  - window_start_ts
+  - stage_nm
+  - src_nm
+  - doc_type_cd
+  - doc_subtype_cd
+  - prcs_nm
